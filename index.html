@@ -1,0 +1,2003 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spain — A Twentieth Anniversary Journey · Phil & Sarah Klein</title>
+<style>
+  :root {
+    --navy: #1a1f2e;
+    --navy-light: #252c3f;
+    --cream: #f5f0e8;
+    --cream-dark: #ede7d8;
+    --gold: #c9954a;
+    --gold-light: #d4a96a;
+    --burgundy: #7a1c2e;
+    --burgundy-light: #9b2437;
+    --olive: #4a6741;
+    --slate: #3a4a5c;
+    --alert-red: #8b1a2e;
+    --alert-bg: #fdf0ef;
+    --confirmed-green: #2e6b3a;
+    --confirmed-bg: #f0f7f0;
+    --text: #2a2a2a;
+    --text-light: #555;
+    --border: #ddd5c4;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.6;
+    font-size: 15px;
+  }
+
+  /* HERO */
+  .hero {
+    background: var(--navy);
+    color: var(--cream);
+    text-align: center;
+    padding: 60px 24px 48px;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(201,149,74,0.15) 0%, transparent 50%, rgba(122,28,46,0.15) 100%);
+  }
+  .hero-eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+    font-weight: 500;
+    position: relative;
+  }
+  .hero h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    font-weight: 400;
+    letter-spacing: 6px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    position: relative;
+  }
+  .hero-subtitle {
+    font-family: Georgia, serif;
+    font-size: clamp(1rem, 2.5vw, 1.4rem);
+    color: var(--gold-light);
+    font-style: italic;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  .hero-names {
+    font-size: 13px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(245,240,232,0.7);
+    position: relative;
+  }
+  .hero-dates {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 24px;
+    border: 1px solid rgba(201,149,74,0.4);
+    border-radius: 2px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold-light);
+    position: relative;
+  }
+
+  /* ALERTS */
+  .alerts-bar {
+    background: var(--alert-red);
+    color: white;
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+  .alerts-bar strong { font-weight: 700; }
+  .alert-badge {
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+    padding: 2px 8px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  /* STICKY NAV */
+  .nav-wrapper {
+    background: var(--navy-light);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 2px solid var(--gold);
+  }
+  .nav {
+    display: flex;
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a {
+    color: rgba(245,240,232,0.7);
+    text-decoration: none;
+    padding: 14px 18px;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+    transition: color 0.2s, background 0.2s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -2px;
+  }
+  .nav a:hover, .nav a.active {
+    color: var(--gold);
+    border-bottom-color: var(--gold);
+    background: rgba(201,149,74,0.08);
+  }
+
+  /* MAIN CONTENT */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  section {
+    padding: 48px 0;
+    border-bottom: 1px solid var(--border);
+  }
+  section:last-child { border-bottom: none; }
+
+  /* CITY HEADER */
+  .city-header {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 28px 32px;
+    border-radius: 4px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .city-header h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+  }
+  .city-meta {
+    text-align: right;
+  }
+  .city-dates {
+    font-size: 13px;
+    color: var(--gold-light);
+    letter-spacing: 1px;
+    margin-bottom: 4px;
+  }
+  .city-hotel {
+    font-size: 12px;
+    color: rgba(245,240,232,0.6);
+  }
+  .city-hotel .dot { color: var(--gold); margin-right: 6px; }
+
+  /* OVERVIEW GRID */
+  .overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 16px;
+    margin-bottom: 32px;
+  }
+  .overview-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px;
+    border-top: 3px solid var(--gold);
+  }
+  .overview-card .city-name {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .overview-card .dates { font-weight: 600; color: var(--navy); margin-bottom: 4px; }
+  .overview-card .hotel { font-size: 13px; color: var(--text-light); margin-bottom: 8px; }
+  .overview-card .highlight {
+    font-size: 13px;
+    color: var(--burgundy);
+    font-style: italic;
+    border-left: 3px solid var(--burgundy);
+    padding-left: 10px;
+  }
+
+  /* DAY BLOCKS */
+  .day {
+    margin-bottom: 40px;
+  }
+  .day-header {
+    background: var(--cream-dark);
+    border-left: 4px solid var(--gold);
+    padding: 12px 16px;
+    margin-bottom: 16px;
+    border-radius: 0 4px 4px 0;
+  }
+  .day-header h3 {
+    font-family: Georgia, serif;
+    font-size: 1.1rem;
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .day-header .budget {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 2px;
+  }
+
+  /* ACTIVITY CARDS */
+  .activity {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+  }
+  .activity.confirmed {
+    border-left: 4px solid var(--confirmed-green);
+    background: var(--confirmed-bg);
+  }
+  .activity.alert {
+    border-left: 4px solid var(--alert-red);
+    background: var(--alert-bg);
+  }
+  .activity.anniversary {
+    border-left: 4px solid var(--gold);
+    background: #fdf9f0;
+  }
+  .activity.dining {
+    border-left: 4px solid var(--burgundy);
+  }
+  .activity.transit-info {
+    border-left: 4px solid var(--slate);
+    background: #f8f9fa;
+  }
+
+  .activity-tag {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 6px;
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 2px;
+  }
+  .tag-confirmed { background: var(--confirmed-green); color: white; }
+  .tag-alert { background: var(--alert-red); color: white; }
+  .tag-anniversary { background: var(--gold); color: white; }
+  .tag-dining { background: var(--burgundy); color: white; }
+  .tag-info { background: var(--slate); color: white; }
+  .tag-michelin { background: var(--navy); color: var(--gold); }
+
+  .activity h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .activity .meta {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+  .activity .meta span { display: flex; align-items: center; gap: 4px; }
+  .activity p { font-size: 14px; color: var(--text); line-height: 1.6; }
+  .activity .action {
+    margin-top: 10px;
+    padding: 8px 12px;
+    background: var(--alert-bg);
+    border: 1px solid #f5c6c6;
+    border-radius: 3px;
+    font-size: 13px;
+    color: var(--alert-red);
+    font-weight: 500;
+  }
+
+  .booking-ref {
+    display: inline-block;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-top: 6px;
+  }
+
+  /* MICHELIN STARS */
+  .michelin {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  /* BOOKINGS TABLE */
+  .bookings-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+  }
+  .bookings-table th {
+    background: var(--navy);
+    color: var(--cream);
+    padding: 10px 12px;
+    text-align: left;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+  .bookings-table td {
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--border);
+    vertical-align: top;
+  }
+  .bookings-table tr:hover td { background: rgba(201,149,74,0.05); }
+  .bookings-table tr.needs-action td { background: var(--alert-bg); }
+  .status-confirmed { color: var(--confirmed-green); font-weight: 600; }
+  .status-action { color: var(--alert-red); font-weight: 600; }
+  .conf-code {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--text-light);
+  }
+
+  /* DINING GRID */
+  .dining-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+  }
+  .dining-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 18px;
+    border-top: 3px solid var(--burgundy);
+  }
+  .dining-card .restaurant-name {
+    font-weight: 700;
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 2px;
+  }
+  .dining-card .restaurant-city {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gold);
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .dining-card .restaurant-meta {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-bottom: 8px;
+  }
+  .dining-card .restaurant-note {
+    font-size: 12px;
+    color: var(--text);
+    background: var(--cream);
+    padding: 6px 10px;
+    border-radius: 3px;
+    margin-top: 8px;
+  }
+  .dining-card .restaurant-note.confirmed-note {
+    background: var(--confirmed-bg);
+    color: var(--confirmed-green);
+    font-weight: 600;
+  }
+
+  /* TRANSIT */
+  .transit-city {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+  }
+  .transit-city-header {
+    background: var(--slate);
+    color: var(--cream);
+    padding: 12px 20px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .transit-city-best {
+    font-size: 11px;
+    color: var(--gold-light);
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  .transit-row {
+    display: grid;
+    grid-template-columns: 160px 1fr;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+  }
+  .transit-row:last-child { border-bottom: none; }
+  .transit-label {
+    background: var(--cream);
+    padding: 10px 16px;
+    font-weight: 600;
+    font-size: 12px;
+    color: var(--text-light);
+    border-right: 1px solid var(--border);
+  }
+  .transit-value {
+    padding: 10px 16px;
+    color: var(--text);
+  }
+
+  /* ANNIVERSARY MOMENT */
+  .anniversary-moment {
+    background: linear-gradient(135deg, #fdf9f0 0%, #fef6e4 100%);
+    border: 1px solid rgba(201,149,74,0.4);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 20px 0;
+    position: relative;
+  }
+  .anniversary-moment::before {
+    content: '✦';
+    position: absolute;
+    top: -12px;
+    left: 24px;
+    background: var(--gold);
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+  }
+  .anniversary-moment p {
+    font-style: italic;
+    color: var(--burgundy);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+
+  /* SECTION HEADERS */
+  .section-title {
+    font-family: Georgia, serif;
+    font-size: 1.6rem;
+    color: var(--navy);
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    background: var(--gold);
+    margin-bottom: 24px;
+  }
+
+  /* FLIGHT CARDS */
+  .flight-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin-bottom: 16px;
+    border-top: 3px solid var(--navy);
+  }
+  .flight-card h4 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 12px;
+  }
+  .flight-detail {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 6px 16px;
+    font-size: 13px;
+  }
+  .flight-detail .label { color: var(--text-light); font-weight: 600; }
+  .flight-detail .value { color: var(--text); }
+
+  /* RESPONSIVE */
+  @media (max-width: 600px) {
+    .city-header { flex-direction: column; }
+    .city-meta { text-align: left; }
+    .transit-row { grid-template-columns: 1fr; }
+    .transit-label { border-right: none; border-bottom: 1px solid var(--border); }
+    .flight-detail { grid-template-columns: 1fr; }
+    .bookings-table { font-size: 12px; }
+    .bookings-table .hide-mobile { display: none; }
+    .overview-grid { grid-template-columns: 1fr; }
+  }
+
+  /* UTILS */
+  .gold { color: var(--gold); }
+  .burgundy { color: var(--burgundy); }
+  .note { font-size: 13px; color: var(--text-light); font-style: italic; margin-top: 8px; }
+  .pill {
+    display: inline-block;
+    padding: 2px 10px;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  .pill-green { background: #e6f4ea; color: #2e6b3a; }
+  .pill-red { background: #fde8e8; color: #8b1a2e; }
+  .pill-gold { background: #fef4e4; color: #a0660a; }
+
+  .info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+  }
+  .info-box {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 14px 16px;
+  }
+  .info-box .label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  .info-box .value {
+    font-size: 14px;
+    color: var(--navy);
+    font-weight: 600;
+  }
+  .info-box .sub { font-size: 12px; color: var(--text-light); }
+
+  hr.section-rule {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 28px 0;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: var(--navy);
+    color: var(--gold);
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 18px;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .back-to-top.visible { opacity: 1; }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<div class="hero" id="top">
+  <div class="hero-eyebrow">A Twentieth Anniversary Journey</div>
+  <h1>Spain</h1>
+  <div class="hero-subtitle">Six Cities · Fourteen Days · Michelin-Starred Dining Throughout</div>
+  <div class="hero-names">Phil & Sarah Klein</div>
+  <div class="hero-dates">July 26 – August 9, 2026</div>
+</div>
+
+<!-- ACTION ALERTS -->
+<div class="alerts-bar">
+  <strong>⚠ Action Required:</strong>
+  <span class="alert-badge">Alhambra — Submit attendee details (passport numbers) to Feel the City Tours immediately</span>
+  <span class="alert-badge">Enroll Priority Pass via Amex Platinum before travel</span>
+  <span class="alert-badge">Phil & Sarah check in SEPARATELY for IB0326</span>
+</div>
+
+<!-- NAV -->
+<div class="nav-wrapper">
+  <nav class="nav">
+    <a href="#overview">Overview</a>
+    <a href="#madrid">Madrid</a>
+    <a href="#toledo">Toledo</a>
+    <a href="#granada">Granada</a>
+    <a href="#sevilla">Sevilla</a>
+    <a href="#barcelona">Barcelona</a>
+    <a href="#girona">Girona</a>
+    <a href="#bookings">Bookings</a>
+    <a href="#flights">Flights</a>
+    <a href="#dining">Dining</a>
+    <a href="#transit">Transit</a>
+  </nav>
+</div>
+
+<!-- OVERVIEW -->
+<section id="overview">
+  <div class="container">
+    <h2 class="section-title">Trip Overview</h2>
+    <div class="section-divider"></div>
+
+    <div class="overview-grid">
+      <div class="overview-card">
+        <div class="city-name">Madrid</div>
+        <div class="dates">Jul 26 – Jul 30 · 4 nights</div>
+        <div class="hotel">JW Marriott Hotel Madrid</div>
+        <div class="highlight">Royal Palace · Prado · Reina Sofía · El Triciclo anniversary dinner</div>
+      </div>
+      <div class="overview-card">
+        <div class="city-name">Toledo</div>
+        <div class="dates">Jul 28 · Day trip</div>
+        <div class="hotel">Day trip from Madrid</div>
+        <div class="highlight">Private art historian · Cathedral treasures · El Greco</div>
+      </div>
+      <div class="overview-card">
+        <div class="city-name">Granada</div>
+        <div class="dates">Jul 30 – Aug 1 · 2 nights</div>
+        <div class="hotel">Palacio de Santa Paula</div>
+        <div class="highlight">Private Alhambra dawn access · Hammam spa evening</div>
+      </div>
+      <div class="overview-card">
+        <div class="city-name">Sevilla</div>
+        <div class="dates">Aug 1 – Aug 4 · 3 nights</div>
+        <div class="hotel">Hotel Alfonso XIII — Luxury Collection</div>
+        <div class="highlight">La Casa del Flamenco · 15th-century Santa Cruz courtyard</div>
+      </div>
+      <div class="overview-card">
+        <div class="city-name">Barcelona</div>
+        <div class="dates">Aug 4 – Aug 9 · 5 nights</div>
+        <div class="hotel">Cotton House Hotel — Autograph Collection</div>
+        <div class="highlight">Disfrutar — 3 Michelin Stars, World's #3 Restaurant</div>
+      </div>
+      <div class="overview-card">
+        <div class="city-name">Girona</div>
+        <div class="dates">Aug 6 · Day trip</div>
+        <div class="hotel">Day trip from Barcelona</div>
+        <div class="highlight">Vintages lunch · Medieval walls · Jewish Quarter</div>
+      </div>
+    </div>
+
+    <div class="anniversary-moment">
+      <p>Every day includes one signature anniversary moment — a private experience, a Michelin dinner, a surprise arrangement, or a memory only the two of you will share. These are marked throughout with ✦.<br><br>
+      <strong>Budget:</strong> $750–$1,000/day for activities and dining (excluding hotels). Michelin tasting menus with wine pairing budget €300–€450/couple.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MADRID -->
+<section id="madrid">
+  <div class="container">
+    <div class="city-header">
+      <h2>Madrid</h2>
+      <div class="city-meta">
+        <div class="city-dates">July 26 – 30 · 4 Nights</div>
+        <div class="city-hotel"><span class="dot">■</span>JW Marriott Hotel Madrid · Booking #84272177 · €2,106.72</div>
+      </div>
+    </div>
+
+    <div class="anniversary-moment">
+      <p>Notify the JW Marriott team of your 20th anniversary at check-in. Request the concierge to arrange a bottle of Cava and rose petals in the room. Marriott Bonvoy Platinum status may facilitate a complimentary balcony suite upgrade.</p>
+    </div>
+
+    <!-- DAY 1 -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Sunday, July 26 — Arrival & First Night</h3>
+        <div class="budget">Est. budget ~$350 · Light first day</div>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Transfer</div>
+        <h4>Blacklane — Madrid Airport Arrival</h4>
+        <div class="meta">
+          <span>10:45 AM</span>
+          <span>MAD → JW Marriott</span>
+          <span>EUR 71.88 paid</span>
+        </div>
+        <p>Iberia IB0326 arrives 10:15 AM. Chauffeur meets at baggage claim with "Phil Klein" sign. Adjusts automatically if flight is delayed.</p>
+        <div class="booking-ref">Booking #568989572</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Coffee</div>
+        <h4>Loca Obsesión — Specialty Coffee</h4>
+        <div class="meta"><span>~€20/couple</span><span>2-min walk from hotel</span></div>
+        <p>Begin with pistachio lattes and vegan French toast at Madrid's finest specialty café. Perfect gentle start after the overnight flight.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Afternoon</div>
+        <h4>El Retiro Park</h4>
+        <div class="meta"><span>6:00 PM</span><span>When temperature drops</span></div>
+        <p>Rest at hotel through the afternoon heat, then explore El Retiro — the Crystal Palace, the lake, and the rose gardens in the cool evening air.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner</div>
+        <h4>Lateral Madrid — Gran Vía</h4>
+        <div class="meta"><span>€35–€50/couple</span><span>Gran Vía 57, Centro</span><span>10-min walk from hotel</span></div>
+        <p>Modern Spanish tapas — stylish, relaxed, consistently excellent. Open every day including Sundays — ideal for arrival night. No reservations needed. Grilled vegetables, tortilla española, gazpacho — clear vegetarian section. Hours: Daily 12pm–12am.</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>A warm, vibrant arrival dinner — the Gran Vía lights outside, a glass of Ribera del Duero, and your first Spanish meal together. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 2 -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Monday, July 27 — Royal Palace Tour, Prado & La Latina</h3>
+        <div class="budget">Est. budget ~$700</div>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Royal Palace Guided Tour — Skip the Line</h4>
+        <div class="meta"><span>10:31 AM</span><span>USD $100.82 paid</span><span>2–2.5 hours</span></div>
+        <p>Mobile ticket — show on phone. <strong>Meeting point: Madrid Souvenirs shop, Calle de Carlos III 1</strong> (steps from the Royal Palace entrance). Largest royal palace in Western Europe — Throne Room, Royal Armoury, Royal Chapel, state apartments. English-language guided tour with skip-the-line access.<br><br>Cancel deadline: 10:31 AM CEST Monday July 26 for full refund.</p>
+        <div class="booking-ref">Viator #1749507469 · Ref: 1366642249</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Afternoon</div>
+        <h4>Prado Museum — Afternoon Visit</h4>
+        <div class="meta"><span>4:30 PM</span><span>€15pp general · Open until 8pm</span></div>
+        <p>Skip the worst of the midday heat. Focus on Velázquez's <em>Las Meninas</em>, Goya's Black Paintings, and El Greco's room. Book at museodelprado.es. Optional: private Context Travel guide €180–€250/couple.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Early Evening Tapas</div>
+        <h4>La Latina Bar Crawl — Cava Baja</h4>
+        <div class="meta"><span>7:00 PM</span><span>€30–€45/couple</span><span>Calle Cava Baja & Almendro</span></div>
+        <p>Madrid's most celebrated tapas street. Start at <strong>Taberna Txakolina (Cava Baja 26)</strong> for pintxos, then work down the street. Classic stand-up bar experience — glass of wine at each. Order: patatas bravas, tortilla española, pimientos de padrón, croquetas de queso (ask for cheese, not ham).</p>
+      </div>
+
+      <p class="note">★ El Triciclo anniversary dinner is booked for <strong>Wednesday July 29</strong> (not tonight — they are closed Mondays).</p>
+    </div>
+
+    <!-- DAY 3 (Toledo) see Toledo section -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Tuesday, July 28 — Toledo Day Trip</h3>
+        <div class="budget">Est. budget ~$600 · See Toledo section below</div>
+      </div>
+      <div class="activity transit-info">
+        <h4>Train: Atocha → Toledo → Atocha</h4>
+        <div class="meta"><span>Depart 09:00</span><span>Arrive Toledo 09:33</span><span>Return 16:30</span></div>
+        <p>AVE from Madrid Puerta de Atocha-Almudena. Full day itinerary in the <a href="#toledo">Toledo section</a>. Return to Madrid ~17:03 — freshen up at hotel before dinner.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Dinner</div>
+        <h4>Juana La Loca — 8:15 PM</h4>
+        <div class="meta"><span>€45–€65pp + wine</span><span>Calle de Recoletos 10, Salamanca</span></div>
+        <p>Creative modern tapas — legendary caramelised onion tortilla. <strong>Reservation confirmed: 2 guests, Phil Klein. Table held until 9:45 PM — arrive promptly at 8:15.</strong> New location: Calle de Recoletos 10. Vegetarian: grilled artichokes with Parmesan & garlic confit, sweet onion tortilla.</p>
+      </div>
+    </div>
+
+    <!-- DAY 4 -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Wednesday, July 29 — El Retiro, Reina Sofía & Anniversary Dinner</h3>
+        <div class="budget">Est. budget ~$750</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Morning</div>
+        <h4>El Retiro Park — Rowboat & Crystal Palace</h4>
+        <div class="meta"><span>9:00 AM</span><span>Free</span></div>
+        <p>Hire a rowboat on the lake, visit the Crystal Palace, stroll the rose gardens before the heat builds.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Museum</div>
+        <h4>Museo Reina Sofía — Guernica</h4>
+        <div class="meta"><span>10:00 AM</span><span>€12pp · Free 7–9pm daily</span></div>
+        <p>Spain's premier modern art museum — home of Picasso's <em>Guernica</em>. Start on Floor 2 (Sabatini Building). Closed Tuesdays. Photography strictly forbidden in the Guernica room. Book at museoreinasofia.es to skip the queue.</p>
+        <div class="action">⚠ Photography strictly forbidden in the Guernica room — enforced firmly.</div>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Anniversary Dinner</div>
+        <h4>El Triciclo</h4>
+        <div class="michelin">Michelin Bib Gourmand · Creative Contemporary Madrid</div>
+        <div class="meta"><span>€60–€80pp + wine</span><span>Calle de Santa María 28, Huertas</span><span>Book: eltriciclo.es</span></div>
+        <p>Seasonal market menu, outstanding vegetarian options, vibrant open kitchen. Hours: Tue–Sun 8:30–11:30pm. Steps from the Reina Sofía. Book at eltriciclo.es or call +34 910 244 798. Mention 20th anniversary and Sarah's vegetarian diet.</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>YOUR ANNIVERSARY DINNER in Madrid — a creative, generous kitchen in the literary Huertas neighbourhood, around the corner from where you spent the afternoon. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- DAY 5 (Travel to Granada) -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Thursday, July 30 — Final Madrid Morning + Train to Granada</h3>
+        <div class="budget">Est. budget ~$450 travel day</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Morning</div>
+        <h4>Final Retiro Walk + Coffee at Alchemy</h4>
+        <div class="meta"><span>8:00 AM</span></div>
+        <p>Crystal Palace, lake, rose gardens. Final coffee at ALCHEMY café before heading to Atocha.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Train</div>
+        <h4>RENFE AVE — Madrid → Granada</h4>
+        <div class="meta"><span>Departs 13:35</span><span>€181.80 paid</span></div>
+        <p>From Madrid Puerta de Atocha-Almudena. BIRD high-speed AVE. Arrive Granada ~15:30. Check in to Palacio de Santa Paula (check-in from 3pm, booking #87632000).</p>
+        <div class="booking-ref">Locator: F7TR2D</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TOLEDO -->
+<section id="toledo">
+  <div class="container">
+    <div class="city-header" style="background: #3a2a1a;">
+      <h2>Toledo</h2>
+      <div class="city-meta">
+        <div class="city-dates">Tuesday, July 28 · Day Trip</div>
+        <div class="city-hotel"><span class="dot">■</span>Day trip from Madrid · AVE from Atocha</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <h3>Full Day — Private Art Historian Tour</h3>
+        <div class="budget">Est. budget ~$600</div>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Train Schedule</h4>
+        <div class="meta"><span>Depart Atocha 09:00</span><span>Arrive Toledo 09:33</span><span>Return 16:30</span></div>
+        <p>Bus C5 from Toledo station winds up to the Cathedral area (~8 min, €1.40) — or take a taxi (~€5–7, 5 min). All Toledo sightseeing is on foot within the car-free old city.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Private Guide</div>
+        <h4>Private Art Historian — Toledo Cathedral</h4>
+        <div class="meta"><span>€200–€280/couple</span><span>Book: magicalspain.com or contexttravel.com</span></div>
+        <p>A private art historian who specialises in Toledo's religious art — unlocks doors closed to the public, explains the El Greco paintings as living theology, takes you through the Sacristy like a private gallery owner.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Lunch</div>
+        <h4>Alfileritos 24</h4>
+        <div class="meta"><span>€35–€55/couple</span><span>Calle Alfileritos 24, Old Town</span><span>Near Cathedral</span></div>
+        <p>Traditional Castilian tapas and raciones — lively, authentic, great-value menu del día. Open daily 10:30am–11:30pm. Sarah: artichoke tapas, grilled fresh fish, salads, Manchego cheese. A beloved Toledo local favourite. Book: alfileritos.com</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Afternoon Tapas — 3:30 PM</div>
+        <h4>El Peñón</h4>
+        <div class="meta"><span>€20–€30/couple</span><span>Calle Carrera 31</span><span>Near train station</span></div>
+        <p>Local Toledo tavern — daily menu of fresh fish and vegetable tapas, beloved by locals. Hours: Mon–Thu 10am–4:30pm, Fri 10am–4:30pm & 8:30–11:30pm, Sat 11am–4:30pm. Ask what the daily vegetable and fish tapas are. Arrives before 3:30pm — gets fully booked. Perfect before the 16:30 return train.</p>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Return to Madrid</h4>
+        <div class="meta"><span>Train 16:30</span><span>Arrive Madrid ~17:03</span></div>
+        <p>Freshen up at hotel. Dinner at Juana La Loca (Calle de Recoletos 10) at 8:15 PM — confirmed reservation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GRANADA -->
+<section id="granada">
+  <div class="container">
+    <div class="city-header" style="background: #4a3020;">
+      <h2>Granada</h2>
+      <div class="city-meta">
+        <div class="city-dates">July 30 – August 1 · 2 Nights</div>
+        <div class="city-hotel"><span class="dot">■</span>Palacio de Santa Paula · Booking #87632000 · €618.20</div>
+      </div>
+    </div>
+
+    <div class="anniversary-moment">
+      <p>Granada may be the most romantic stop on the entire journey. The combination of the Alhambra at dawn, the hammam beneath the Albaicín, and dinner on a rooftop terrace with the Alhambra glowing beneath you is simply extraordinary. ✦</p>
+    </div>
+
+    <!-- Day: Jul 30 Arrive -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Thursday, July 30 (Afternoon) — Arrive + Hammam</h3>
+        <div class="budget">Est. budget ~$450</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Arrive ~14:30</div>
+        <h4>Check In — Palacio de Santa Paula</h4>
+        <p>Check in, rest, explore the stunning cloister.</p>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Anniversary Spa</div>
+        <h4>Hammam Al Ándalus — Private Moorish Spa</h4>
+        <div class="meta"><span>€120–€180/couple (private circuit)</span><span>Book: granada.hammamalandalus.com</span></div>
+        <p>Book the EXCLUSIVE private hammam circuit for two: 90 minutes of hot and cold pools, steam room, and optional aromatherapy massage — all in a private suite beneath the Albaicín. Book the private circuit, not the shared one, for your anniversary. The hammam has operated in the same tradition for 1,000 years.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Dinner</div>
+        <h4>Carmen Mirador de Aixa — 9:00 PM</h4>
+        <div class="meta"><span>€50–€70pp + wine</span><span>Carril de San Agustín 2, Albaicín</span></div>
+        <p>Rooftop terrace with direct views over the Alhambra. <strong>Reservation confirmed: 9:00 PM, 2 guests, Phil Klein.</strong> Allow 20 min from hotel — it's uphill. Take a taxi (~€7) rather than risk being late. Request the outside terrace table on arrival. Traditional Andalusian — grilled sea bass, Andalusian salads, gazpacho.</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>The Alhambra floodlit below you, a glass of Ribera del Duero, and the warm night air of Andalucía — your first Granada evening is one you'll never forget. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Day: Jul 31 Alhambra -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Friday, July 31 — Alhambra at Dawn + Albaicín Sunset Tour</h3>
+        <div class="budget">Est. budget ~$800</div>
+      </div>
+
+      <div class="activity alert">
+        <div class="activity-tag tag-alert">⚠ Critical Time</div>
+        <h4>Alhambra — Nasrid Palaces + Audioguide</h4>
+        <div class="meta"><span>Entry: 08:30 AM BINDING</span><span>€133.80 paid</span></div>
+        <p><strong>Depart hotel by 08:20 AM.</strong> Entry to Nasrid Palaces is fixed at 08:30 — cannot be changed. Arrive 10 minutes early. Carry valid photo ID — all participants must show ID.<br><br>
+        After Nasrid Palaces, the same ticket gives free access to: Alcazaba fortress, Partal gardens, Generalife.<br><br>
+        Tickets sent by email up to 24 hours before — <strong>check spam folder.</strong> Time may vary up to 120 minutes on high-demand dates — check actual time on received tickets. Take a taxi from hotel (~€7–10, 10 min) to guarantee timing.</p>
+        <div class="action">⚠ CRITICAL: Submit attendee details (full names + passport/ID numbers) to Feel the City Tours immediately — info@feelthecitytours.com — or the ticket cannot be used. Policy: NON-REFUNDABLE.</div>
+        <div class="booking-ref">Booking #3690261897 · Feel the City Tours · WhatsApp: +34 600 124 206</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">12:30 PM</div>
+        <h4>Return to Hotel — Siesta</h4>
+        <p>It will be hot. This morning deserves quiet reflection.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Lunch</div>
+        <h4>Taberna Bulanico (4.9 Stars — Granada's Finest)</h4>
+        <div class="meta"><span>€60–€80/couple</span><span>Plaza Pescadería 15, Granada Centro</span></div>
+        <p>Contemporary Andalusian tapas. Hours: Wed–Sat 11:30am–4:30pm & 7:30–11:30pm, Sun 12pm–12am, <strong>closed Mon & Tue</strong>. Order: tuna tataki, fried aubergine with honey (berenjenas con miel), octopus on potato purée. Excellent vegetarian-friendly starters. Book: tabernabulanico.com</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Albaicín & Sacromonte Sunset Walking Tour — 8:00 PM</h4>
+        <div class="meta"><span>USD $35.24 paid</span><span>2 hours</span></div>
+        <p><strong>Meet at Plaza Nueva next to the fountain — look for the PINK UMBRELLA.</strong> Arrive by 7:50 PM — the tour leaves without late arrivals. Route: Plaza Nueva → Paseo de los Tristes → steep climb to Mirador de San Nicolás (sunset over the Alhambra) → Sacromonte. Ends back at Plaza Nueva. The golden light on the Alhambra from the Mirador at this time of evening is the iconic Granada moment.</p>
+        <div class="booking-ref">GYG48YR5ZA65 · Lolita's Tours</div>
+      </div>
+    </div>
+
+    <!-- Day: Aug 1 Depart -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Saturday, August 1 — Final Morning + Train to Seville</h3>
+        <div class="budget">Est. budget ~$600 travel day</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">8:00 AM</div>
+        <h4>Morning Walk — Granada Cathedral Quarter & Alcaicería Bazaar</h4>
+        <p>Cool of the morning. The ancient silk market (Alcaicería) is atmospheric early, before the crowds.</p>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Train: Granada → Seville</h4>
+        <div class="meta"><span>Depart ~13:00–14:00</span><span>~2h 43m journey</span></div>
+        <p>Arrive Seville early evening. Taxi to Hotel Alfonso XIII. Check in to the palace-hotel (booking #84275182).</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEVILLA -->
+<section id="sevilla">
+  <div class="container">
+    <div class="city-header" style="background: #2a1f0a;">
+      <h2>Sevilla</h2>
+      <div class="city-meta">
+        <div class="city-dates">August 1 – 4 · 3 Nights</div>
+        <div class="city-hotel"><span class="dot">■</span>Hotel Alfonso XIII · Luxury Collection · Booking #84275182 · €1,622.38</div>
+      </div>
+    </div>
+
+    <div class="anniversary-moment">
+      <p>The Hotel Alfonso XIII is arguably the grandest hotel in Andalusia — a former royal palace. Request a private sherry tasting in the hotel's courtyard on your first evening. Seville's private flamenco soirée is the most memorable experience of the entire trip. ✦</p>
+    </div>
+
+    <!-- Aug 1 Evening -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Saturday, August 1 (Evening) — Arrive + First Seville Night</h3>
+        <div class="budget">Est. budget ~$600</div>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Private Experience</div>
+        <h4>Private Sherry & Fino Tasting — Alfonso XIII Courtyard</h4>
+        <div class="meta"><span>€80–€120/couple</span><span>Arrange through concierge</span></div>
+        <p>Ask the concierge to arrange a private fino and manzanilla tasting in the hotel's extraordinary Moorish courtyard. Paired with jamón ibérico and local cheeses — a magical first Seville evening.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner</div>
+        <h4>Az-Zait</h4>
+        <div class="meta"><span>€45–€65pp + wine</span><span>Calle San Hermenegildo 18, Casco Antiguo</span></div>
+        <p>Modern Andalusian bistro — intimate, neighbourhood favourite, excellent seasonal cooking. Tue–Sun 1:30–4pm & 8:30–11:30pm, <strong>closed Monday</strong>. Very popular with Seville foodies — book ahead at azzaitsevilla.com. Daily grilled fish, vegetable-forward seasonal dishes.</p>
+      </div>
+    </div>
+
+    <!-- Aug 2 Cathedral & Flamenco -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Sunday, August 2 — Cathedral, Alcázar & La Casa del Flamenco</h3>
+        <div class="budget">Est. budget ~$900</div>
+      </div>
+
+      <div class="activity">
+        <h4>Seville Cathedral & Giralda Tower</h4>
+        <div class="meta"><span>Morning</span><span>€12–€15pp</span><span>Book: catedraldesevilla.es</span></div>
+        <p>World's largest Gothic cathedral. Climb the Giralda tower (a ramp, not stairs) for panoramic views. Columbus's tomb is inside. Allow 1.5–2 hours.</p>
+      </div>
+
+      <div class="activity">
+        <h4>Royal Alcázar of Seville</h4>
+        <div class="meta"><span>Afternoon</span><span>€14.50pp</span><span>Book: alcazarsevilla.org</span></div>
+        <p>UNESCO World Heritage Mudéjar palace still in use by the Spanish royal family. Book well in advance — sells out in summer. The gardens with peacocks, the Mudéjar rooms, and the Upper Royal Apartments are extraordinary. Allow 2.5 hours.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Early Evening Tapas — 7:00 PM</div>
+        <h4>Bar Alfalfa</h4>
+        <div class="meta"><span>€25–€35/couple</span><span>Calle Candilejo 1, Barrio Santa Cruz</span></div>
+        <p>Iconic small bar in Santa Cruz Jewish quarter — classic Seville atmosphere. Daily 9am–12am. Arrive before 7:30pm to get a spot. Order at the counter, find any surface, absorb the energy. Sarah: pesto bruschetta, Manchego, grilled vegetables, salmorejo.</p>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Anniversary Flamenco</div>
+        <h4>La Casa del Flamenco — 9:00 PM Show</h4>
+        <div class="meta"><span>€24pp general · Front row upgrade available</span><span>Calle Ximénez de Enciso 28</span><span>Book: lacasadelflamenco.es</span></div>
+        <p>Premium tablao in a 15th-century Andalusian courtyard in Barrio Santa Cruz. Shows daily at 7pm & 9pm — sells out fast in August. Book the 9pm show. <strong>Upgrade to front row seating for the full emotional impact.</strong></p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>The 15th-century courtyard, the sound of footwork on wooden boards, the singer's duende filling the stone walls — this is the defining Seville evening. ✦</p>
+        </div>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner After the Show</div>
+        <h4>La Bartola or Calle Betis Restaurants (Triana)</h4>
+        <div class="meta"><span>Note: Lalola is closed Sundays</span></div>
+        <p>August 2 is a Sunday — Lalola is closed. Substitute with La Bartola or explore the riverside restaurants on Calle Betis in Triana instead.</p>
+      </div>
+    </div>
+
+    <!-- Aug 3 Cathedral Tour -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Monday, August 3 — Guided Tour & Farewell Seville</h3>
+        <div class="budget">Est. budget ~$550</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">9:30 AM</div>
+        <h4>Cathedral Sunday Mass (Optional)</h4>
+        <p>Open to all — deeply moving with organ and choir. Then remain inside for the 10:00 AM guided tour.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Cathedral, Giralda & Alcázar Priority Tour — 10:00 AM</h4>
+        <div class="meta"><span>USD $163.08 paid</span><span>150 minutes</span></div>
+        <p><strong>Meeting point: Plaza del Triunfo, next to 'La Inmaculada Concepción' monument.</strong> Arrive by 9:30 AM (30 min before). Look for guide in PURPLE Crown Tours t-shirt. Includes: Cathedral interior + Columbus tomb + Giralda tower + Royal Alcázar.<br><br>
+        Dress code: no sleeveless shirts, no short skirts, no sandals or flip flops. Bring ID matching booking.</p>
+        <div class="booking-ref">GYG32L682KZ6 · Crown Tours</div>
+      </div>
+
+      <div class="activity">
+        <h4>Private Olive Oil & Andalusian Wine Tasting (Optional)</h4>
+        <div class="meta"><span>€80–€120/couple</span></div>
+        <p>Book through a Seville specialist: private afternoon tasting of Andalusia's finest olive oils, local Manzanilla and Fino sherries, and artisan cheeses with a local sommelier.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Final Seville Dinner</div>
+        <h4>Las Teresas</h4>
+        <div class="meta"><span>€30–€45/couple</span><span>Calle Santa Teresa 2, Barrio Santa Cruz</span><span>No reservations</span></div>
+        <p>Traditional Sevillian tapas institution — rustic bullfighting décor, genuinely local atmosphere. Daily 9am–12am. If you only have time for one tapas bar in Seville, make it Las Teresas. Stand at the bar like a local. <strong>Must order: espinacas con garbanzos (spinach & chickpeas)</strong> — one of the great Sevillian vegetarian tapas.</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>A fitting farewell to Seville — cold fino, espinacas con garbanzos, and the narrow Santa Cruz streets at night. This is the authentic Seville experience. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aug 4 Train to BCN -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Tuesday, August 4 — Train to Barcelona</h3>
+        <div class="budget">Est. budget ~$500 travel day</div>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Train</div>
+        <h4>RENFE AVE 03943 — Seville → Barcelona Sants</h4>
+        <div class="meta"><span>Depart 08:37 · Arrive 14:54</span><span>USD $243.18 paid</span><span>6h 17m · No changes</span></div>
+        <p><strong>Phil: Carriage 23, Seat 3B · Sarah: Carriage 23, Seat 3C</strong><br>
+        2 × Elige Confort (First Class equivalent). eTickets on phone or printed A4 — bring photo ID.<br>
+        Includes free Cercanías travel up to 4 hrs before departure and 4 hrs after arrival.<br><br>
+        Arrange separate taxi to Santa Justa station (~07:15 AM from Alfonso XIII).</p>
+        <div class="booking-ref">Reference: 9VLUZN</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BARCELONA -->
+<section id="barcelona">
+  <div class="container">
+    <div class="city-header" style="background: #1a2a1f;">
+      <h2>Barcelona</h2>
+      <div class="city-meta">
+        <div class="city-dates">August 4 – 9 · 5 Nights</div>
+        <div class="city-hotel"><span class="dot">■</span>Cotton House Hotel — Autograph Collection · Booking #93055760 · €2,303.13</div>
+      </div>
+    </div>
+
+    <div class="anniversary-moment">
+      <p>Barcelona has four 3-Michelin-Star restaurants — more per square mile than almost anywhere in Europe. This is your gastronomic finale. Brief the Cotton House concierge about your anniversary so they can coordinate a room surprise on arrival. ✦</p>
+    </div>
+
+    <!-- Aug 4 Arrive + Tapas Tour -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Tuesday, August 4 — Arrive Barcelona + Tapas Walking Tour</h3>
+        <div class="budget">Est. budget ~$500</div>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Arrive Barcelona Sants 14:54</h4>
+        <p>Taxi from Barcelona Sants to Cotton House Hotel (Gran Via de les Corts Catalanes 670) — check in, rest.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Barcelona Tapas Walking Tour — 7:00 PM</h4>
+        <div class="meta"><span>USD $155.10 paid</span><span>3 hours</span><span>Max 16 people</span></div>
+        <p><strong>Meet at Travel Bar, Carrer de la Boqueria 27 — black sign with 'Travel' in yellow. Arrive by 6:45 PM.</strong> 3 hours through the Gothic Quarter with food and wine at 4 stops: pincho bar, fish bar, traditional tapas bar, and possibly a jamón shop. Ends at Pg. de Colom 7. Contact: +34 932 49 41 23.</p>
+        <div class="booking-ref">GYGZGZ3G32AN · Travel Bound</div>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner (After Tour or Standalone)</div>
+        <h4>Colom Restaurant — Best Paella in Barcelona</h4>
+        <div class="meta"><span>€50–€70/couple</span><span>Carrer dels Escudellers 33, Gothic Quarter</span></div>
+        <p>Catalan seafood — magnificent paella, fresh fish, traditional Mediterranean. Daily 12:30pm–12am. Seafood paella, grilled lubina (sea bass), sautéed squid. Book: colom.cat</p>
+      </div>
+    </div>
+
+    <!-- Aug 5 Park Güell + Sagrada Familia -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Wednesday, August 5 — Park Güell, Picasso Museum & Sagrada Família</h3>
+        <div class="budget">Est. budget ~$750</div>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Park Güell Guided Tour — 9:30 AM</h4>
+        <div class="meta"><span>USD $70.50 paid</span><span>75 minutes</span></div>
+        <p><strong>Meeting point: Main entrance at Ctra. del Carmel 23, Horta-Guinardó. Look for 'Golden Tour Guide' sign. Arrive by 9:15 AM — LATE ARRIVALS CANNOT ENTER.</strong> Skip-the-line access. Wear comfortable shoes, hat, sunscreen — the park is on a hill. Group tour: you cannot enter Park Güell without the guide.</p>
+        <div class="booking-ref">GYGFWV8KAABH · Golden Tour Guide · Contact: +34 623 41 47 09</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">11:30 AM</div>
+        <h4>Light Lunch — La Boqueria Market</h4>
+        <p>Oysters, fresh fruit, grilled fish at the market counters.</p>
+      </div>
+
+      <div class="activity">
+        <h4>Museu Picasso — 2:00 PM</h4>
+        <div class="meta"><span>€14pp</span><span>Book: museupicasso.bcn.cat</span></div>
+        <p>4,200 works tracing Picasso's evolution from teenage student in Barcelona to fully realised master. The 'Las Meninas' series (after Velázquez) is extraordinary. Five connected medieval palaces in El Born. Beautifully air-conditioned — perfect for the hottest part of the afternoon. Allow 1.5–2 hours.</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Tour</div>
+        <h4>Sagrada Família Priority Access Guided Tour — 5:30 PM</h4>
+        <div class="meta"><span>USD $187.96 paid</span><span>1.5 hours</span></div>
+        <p><strong>Meeting point: Plaça de Gaudí near the children's playground (Carrer Gaudí 417). Look for guide in PURPLE Crown Tours jacket near the stairs. Arrive by 5:00 PM (30 min early).</strong> The 5:30 PM slot puts you inside during extraordinary late-afternoon light through the stained glass.<br><br>
+        Dress code strictly enforced: knees AND shoulders must be covered. No shorts, sleeveless shirts, or short skirts.</p>
+        <div class="booking-ref">GYG48YR6G5X9 · Crown Tours</div>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Evening Tapas — 7:15 PM</div>
+        <h4>Carrer de Blai Pintxos Crawl, Poble Sec</h4>
+        <div class="meta"><span>€25–€40/couple</span><span>15-min walk or short taxi from Sagrada Família</span></div>
+        <p>Barcelona's famous pintxos street — lined with tapas bars. Take a plate, pick bites from the bar, pay by toothpick. Completely vegetarian-friendly throughout. Grab a glass of Albariño and work your way along. Bars open from 6:30pm, most lively 7–10pm.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner</div>
+        <h4>Sésamo</h4>
+        <div class="meta"><span>€40–€55pp + wine</span><span>Carrer de Sant Antoni Abat 52, El Raval</span></div>
+        <p>Beloved vegetarian bistro-bar — intimate, seasonal, creative dishes, great natural wines. Wed–Mon 7pm–late, <strong>closed Tuesday</strong>. Full menu is vegetarian. Book ahead: restaurantsesamo.com</p>
+      </div>
+    </div>
+
+    <!-- Aug 6 Girona see section -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Thursday, August 6 — Girona Day Trip + Anniversary Dinner</h3>
+        <div class="budget">Est. budget ~$950</div>
+      </div>
+      <div class="activity transit-info">
+        <h4>Day trip to Girona — see <a href="#girona">Girona section</a></h4>
+        <p>Train from Barcelona Sants (38 min). Return ~6pm. Anniversary dinner in Barcelona (Petit Comité) in the evening.</p>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Anniversary Dinner</div>
+        <h4>Petit Comité</h4>
+        <div class="meta"><span>€70–€100pp + wine</span><span>Passatge de la Concepció 13, Eixample</span><span>3-min walk from Cotton House</span></div>
+        <p>Refined Catalan-French bistro — intimate, candlelit, elegant without being stiff. Beautiful courtyard. Mon–Sat 1:30–3:30pm & 8:30–11pm, <strong>closed Sunday</strong>. Reserve the courtyard table. Mention the anniversary. Book: petitcomite.cat</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>YOUR ANNIVERSARY DINNER in Barcelona — three minutes from your hotel, a candlelit courtyard, and a kitchen that produces some of the finest Catalan cooking in the Eixample. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aug 7 Casa Batlló -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Friday, August 7 — Casa Batlló, Gothic Quarter & Tapas Evening</h3>
+        <div class="budget">Est. budget ~$800</div>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Special Experience</div>
+        <h4>Casa Batlló — Magic Nights Experience</h4>
+        <div class="meta"><span>€60–€80pp</span><span>Book early: casabatllo.es · Sells out in August</span></div>
+        <p>Evening 'Magic Nights' immersive experience — a multimedia journey through Gaudí's most dreamlike building at golden hour, with champagne included. Far more intimate and romantic than the standard daytime visit.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Early Evening Tapas — 6:30 PM</div>
+        <h4>Cal Pep, El Born</h4>
+        <div class="meta"><span>€40–€60/couple</span><span>Plaça de les Olles 8, El Born</span></div>
+        <p>Barcelona's most celebrated seafood tapas bar — counter seating, chef cooks in front of you, no menu. Tue–Sat 1pm–3:45pm & 7:30–11pm, Mon 7:30–11pm, <strong>closed Sunday</strong>. No reservations for the bar — queue at the door, arrive at 6:30pm on the dot. Sarah: grilled artichokes, courgette flowers, daily fish — ask for the vegetable and fish options.</p>
+      </div>
+
+      <div class="activity">
+        <h4>Private Gothic Quarter Evening Tour — Runner Bean Private</h4>
+        <div class="meta"><span>€150–€200/couple</span><span>8:30 PM</span><span>Book: runnerbeantours.com/private</span></div>
+        <p>Just Phil and Sarah with a dedicated guide. 2.5 hours through Roman ruins, medieval Jewish quarter, Barcelona Cathedral, and streets where Picasso spent his formative years. Deep into golden hour light on the ancient stones. Request guide Lowri or Ann-Marie.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Dinner</div>
+        <h4>Sésamo (or Enigma / ABaC optional upgrade)</h4>
+        <div class="meta"><span>€40–€60pp + wine</span><span>Carrer de Sant Antoni Abat 52</span></div>
+        <p>Return to the beloved vegetarian bistro — or upgrade to Enigma (2★) or ABaC (3★) for a Michelin dining experience. Book: restaurantsesamo.com</p>
+      </div>
+    </div>
+
+    <!-- Aug 8 Final Full Day -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Saturday, August 8 — Barceloneta Beach, Tapas & Farewell Sunset</h3>
+        <div class="budget">Est. budget ~$700</div>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">9:00 AM</div>
+        <h4>Park Güell Free Outer Sections</h4>
+        <p>Morning breeze, parakeets, final city views — the free outer sections require no ticket.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">10:30 AM</div>
+        <h4>Barceloneta Beach Morning Stroll</h4>
+        <p>Walk from Gothic Quarter down to Barceloneta — 20 minutes on foot from Cotton House. Stroll the Passeig Marítim, dip your feet in the Mediterranean, find a chiringuito for coffee and a croissant. Walk south to Port Olímpic, back through El Born.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Lunch & Afternoon Tapas — 1:30 PM</div>
+        <h4>El Xampanyet, El Born</h4>
+        <div class="meta"><span>€25–€35/couple</span><span>Carrer de Montcada 22, El Born</span></div>
+        <p>Barcelona's most beloved old-school cava bar — standing room, ancient tilework, timeless atmosphere. Tue–Sat 12pm–3:30pm & 7–11pm, Sun 12–3:30pm, <strong>closed Monday</strong>. No reservations — arrive at opening. Order: house cava (legendary), Manchego, tortilla española, patatas bravas.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">3:00 PM – 6:00 PM</div>
+        <h4>Hotel Siesta + Packing</h4>
+        <p>Lay out clothes for tomorrow's early flight. Blacklane pickup at 7:00 AM.</p>
+      </div>
+
+      <div class="activity anniversary">
+        <div class="activity-tag tag-anniversary">✦ Golden Hour</div>
+        <h4>Bunkers del Carmel — Anniversary Champagne</h4>
+        <div class="meta"><span>8:20 PM</span><span>~€30 · Cotton House concierge can arrange chilled Cava</span></div>
+        <p>Taxi to the Bunkers del Carmel (old civil war anti-aircraft batteries) for 8:20pm golden hour. The 360° panoramic view of Barcelona — Sagrada Família, the sea, Montjuïc, the entire city glowing golden — is the perfect final image of your 20th anniversary journey through Spain.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Farewell Dinner</div>
+        <h4>Teresa Carles</h4>
+        <div class="meta"><span>€50–€70pp + wine</span><span>Carrer de Jovellanos 2, Eixample</span></div>
+        <p>Celebrated Barcelona vegetarian institution — 25+ years of history, beautiful interior, creative seasonal Mediterranean menu. Open every day 9am–11:30pm. Full menu vegetarian — everything safe for Sarah. Mention the anniversary when booking. Book: teresacarles.com</p>
+        <div class="anniversary-moment" style="margin:12px 0 0;">
+          <p>A perfect farewell — a Barcelona institution where Sarah can truly eat whatever she likes, and where the food is genuinely excellent for everyone. Early night: 7:00am Blacklane pickup tomorrow. ✦</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Aug 9 Departure -->
+    <div class="day">
+      <div class="day-header">
+        <h3>Sunday, August 9 — Farewell</h3>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">7:00 AM</div>
+        <h4>Final Coffee on the Cotton House Balcony</h4>
+        <p>The best view in the Eixample. ✦</p>
+      </div>
+
+      <div class="activity confirmed">
+        <div class="activity-tag tag-confirmed">Confirmed Transfer</div>
+        <h4>Blacklane — Cotton House Hotel to Barcelona El Prat</h4>
+        <div class="meta"><span>7:00 AM pickup</span><span>EUR 76.26 paid</span><span>~25 min</span></div>
+        <p>From Cotton House Hotel, Gran Via de les Corts Catalanes 670. Arrives airport ~7:25–7:30am. Check in to Delta DL0129. Online check-in opens Aug 8 at ~10:55am — check in the evening before and download boarding passes.</p>
+        <div class="booking-ref">Booking #660894419 · Flight: Delta DL0129</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GIRONA -->
+<section id="girona">
+  <div class="container">
+    <div class="city-header" style="background: #1f2a3a;">
+      <h2>Girona</h2>
+      <div class="city-meta">
+        <div class="city-dates">Thursday, August 6 · Day Trip</div>
+        <div class="city-hotel"><span class="dot">■</span>Day trip from Barcelona · Train from Sants (~38 min)</div>
+      </div>
+    </div>
+
+    <div class="day">
+      <div class="day-header">
+        <h3>Full Day — Medieval City + Lunch + Return to Barcelona</h3>
+        <div class="budget">Est. budget ~$950</div>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Train: Barcelona Sants → Girona</h4>
+        <div class="meta"><span>Depart 8:30 AM</span><span>~38 min</span><span>~€8–12 one way</span></div>
+        <p>Regional Rodalies trains depart frequently from Barcelona Sants mainline station (not the metro Sants-Estació — walk upstairs). Buy at Sants ticket machines. Walk from Girona station to Cathedral: 10 minutes across the river.</p>
+      </div>
+
+      <div class="activity">
+        <div class="activity-tag tag-info">Self-Guided Walk</div>
+        <h4>Girona Old Town — Cathedral, Jewish Quarter & Medieval Walls</h4>
+        <p>Cross the River Onyar on the colourful painted bridges. The Jewish Quarter (El Call), Cathedral, and medieval walls are all within 800m of the station. Girona's entire old town is walkable in 20 minutes end-to-end. Follow the river toward the Cathedral.</p>
+      </div>
+
+      <div class="activity dining">
+        <div class="michelin">Lunch</div>
+        <h4>Vintages, Girona</h4>
+        <div class="meta"><span>€60–€80/couple</span><span>Carrer de la Cort Reial 15, Girona Old Town</span></div>
+        <p>Mediterranean — organic produce, mussels, octopus, exceptional wine list. Mon/Thu–Sun 1–3pm & 8–10pm, <strong>closed Tue & Wed</strong>. August 6 is Thursday — open. Order: organic tomato salad, mussels in white wine, grilled octopus, natural wine list. Book: vintagesgirona.cat</p>
+      </div>
+
+      <div class="activity transit-info">
+        <h4>Return to Barcelona</h4>
+        <div class="meta"><span>~6:00 PM</span></div>
+        <p>Return train to Barcelona Sants. Anniversary dinner at Petit Comité (3-min walk from Cotton House) this evening.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKINGS SUMMARY -->
+<section id="bookings">
+  <div class="container">
+    <h2 class="section-title">All Confirmed Bookings</h2>
+    <div class="section-divider"></div>
+
+    <div class="activity alert" style="margin-bottom:24px;">
+      <div class="activity-tag tag-alert">Action Required</div>
+      <h4>Alhambra — Attendee Details MUST Be Submitted</h4>
+      <p>Full names + passport/ID numbers must be submitted to Feel the City Tours. Without this, the NON-REFUNDABLE ticket cannot be used. Email: info@feelthecitytours.com · WhatsApp: +34 600 124 206</p>
+    </div>
+
+    <div style="overflow-x:auto;">
+      <table class="bookings-table">
+        <thead>
+          <tr>
+            <th>What</th>
+            <th>Date</th>
+            <th>Time</th>
+            <th class="hide-mobile">Confirmation</th>
+            <th>Paid</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Iberia IB0326 — Phil</strong></td>
+            <td>Jul 25</td>
+            <td>20:40 JFK</td>
+            <td class="conf-code hide-mobile">7PAB5T · 075-2530732990</td>
+            <td>EUR 108.72</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Iberia IB0326 — Sarah</strong></td>
+            <td>Jul 25</td>
+            <td>20:40 JFK</td>
+            <td class="conf-code hide-mobile">NX3XX · 075-2530749861</td>
+            <td>EUR 2,219.25</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Blacklane — MAD Arrival</strong></td>
+            <td>Jul 26</td>
+            <td>10:45 AM</td>
+            <td class="conf-code hide-mobile">#568989572</td>
+            <td>EUR 71.88</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>JW Marriott Madrid</strong></td>
+            <td>Jul 26</td>
+            <td>Check-in 3pm</td>
+            <td class="conf-code hide-mobile">#84272177</td>
+            <td>€2,106.72</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Royal Palace Tour (Viator)</strong></td>
+            <td>Jul 27</td>
+            <td>10:31 AM</td>
+            <td class="conf-code hide-mobile">#1749507469 · Ref: 1366642249</td>
+            <td>USD $100.82</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Renfe MAD → GRX</strong></td>
+            <td>Jul 30</td>
+            <td>13:35</td>
+            <td class="conf-code hide-mobile">F7TR2D</td>
+            <td>€181.80</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Palacio de Santa Paula</strong></td>
+            <td>Jul 30</td>
+            <td>Check-in 3pm</td>
+            <td class="conf-code hide-mobile">#87632000</td>
+            <td>€618.20</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr class="needs-action">
+            <td><strong>Alhambra + Audioguide</strong></td>
+            <td>Jul 31</td>
+            <td>08:30 AM</td>
+            <td class="conf-code hide-mobile">#3690261897</td>
+            <td>€133.80</td>
+            <td><span class="status-action">⚠ Submit ID details!</span></td>
+          </tr>
+          <tr>
+            <td><strong>Albaicín Sunset Tour</strong></td>
+            <td>Jul 31</td>
+            <td>8:00 PM</td>
+            <td class="conf-code hide-mobile">GYG48YR5ZA65</td>
+            <td>USD $35.24</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Hotel Alfonso XIII</strong></td>
+            <td>Aug 1</td>
+            <td>Check-in 3pm</td>
+            <td class="conf-code hide-mobile">#84275182</td>
+            <td>€1,622.38</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Cathedral/Alcázar Tour</strong></td>
+            <td>Aug 3</td>
+            <td>10:00 AM</td>
+            <td class="conf-code hide-mobile">GYG32L682KZ6</td>
+            <td>USD $163.08</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Renfe SVQ → BCN</strong></td>
+            <td>Aug 4</td>
+            <td>08:37</td>
+            <td class="conf-code hide-mobile">9VLUZN · Car 23</td>
+            <td>USD $243.18</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Cotton House Hotel</strong></td>
+            <td>Aug 4</td>
+            <td>Check-in 3pm</td>
+            <td class="conf-code hide-mobile">#93055760</td>
+            <td>€2,303.13</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Barcelona Tapas Tour</strong></td>
+            <td>Aug 4</td>
+            <td>7:00 PM</td>
+            <td class="conf-code hide-mobile">GYGZGZ3G32AN</td>
+            <td>USD $155.10</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Park Güell Tour</strong></td>
+            <td>Aug 5</td>
+            <td>9:30 AM</td>
+            <td class="conf-code hide-mobile">GYGFWV8KAABH</td>
+            <td>USD $70.50</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Sagrada Família Tour</strong></td>
+            <td>Aug 5</td>
+            <td>5:30 PM</td>
+            <td class="conf-code hide-mobile">GYG48YR6G5X9</td>
+            <td>USD $187.96</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Blacklane BCN → Airport</strong></td>
+            <td>Aug 9</td>
+            <td>7:00 AM</td>
+            <td class="conf-code hide-mobile">#660894419</td>
+            <td>EUR 76.26</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+          <tr>
+            <td><strong>Delta DL0129 Home</strong></td>
+            <td>Aug 9</td>
+            <td>10:55 AM BCN</td>
+            <td class="conf-code hide-mobile">JQP7XE</td>
+            <td>—</td>
+            <td><span class="status-confirmed">Confirmed</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- FLIGHTS -->
+<section id="flights">
+  <div class="container">
+    <h2 class="section-title">Flights</h2>
+    <div class="section-divider"></div>
+
+    <div class="flight-card">
+      <h4>✈ Outbound — Iberia IB0326 · JFK → Madrid · Saturday July 25, 2026</h4>
+      <div class="flight-detail">
+        <div class="label">Departure</div>
+        <div class="value">Saturday July 25 at 20:40 — Terminal 8, JFK. Arrive Madrid Barajas 10:15 AM July 26.</div>
+        <div class="label">Phil's Ticket</div>
+        <div class="value">Booking Code: <strong>7PAB5T</strong> · Ticket 075-2530732990 · EUR 108.72 (award/taxes) · Fare: UFF</div>
+        <div class="label">Sarah's Ticket</div>
+        <div class="value">Booking Code: <strong>NX3XX</strong> · Ticket 075-2530749861 · EUR 2,219.25 / USD 1,530 · Business Class</div>
+        <div class="label">Baggage</div>
+        <div class="value">2 checked bags each, up to 23kg each</div>
+        <div class="label">Arrive By</div>
+        <div class="value">7:30 PM — 3 hours before international departure</div>
+        <div class="label">Check-In</div>
+        <div class="value">Zones 6–7, Business class counters. <strong>Phil and Sarah must check in SEPARATELY</strong> — different ticket numbers and fare classes.</div>
+        <div class="label">Security</div>
+        <div class="value">Sarah (Business) → Priority Security Lane. Phil (award/UFF) → verify eligibility; standard TSA PreCheck if enrolled.</div>
+        <div class="label">Boarding</div>
+        <div class="value">Group 1 Business Class boards ~20:00 (40 min before departure)</div>
+      </div>
+      <div class="action" style="margin-top:16px;">⚠ Phil and Sarah are on SEPARATE ticket numbers with different fare classes. Both must check in independently. Phil's fare is an award/redemption ticket (UFF class). Sarah's is full paid Business cabin (EUR 2,219.25).</div>
+
+      <hr class="section-rule">
+      <h4 style="margin-bottom:12px; font-size:14px; color:var(--navy);">JFK Lounge Options</h4>
+      <div class="info-grid">
+        <div class="info-box">
+          <div class="label">Greenwich Lounge (T8) — Recommended</div>
+          <div class="value">Same terminal as gate — most convenient</div>
+          <div class="sub">Sarah: complimentary (Business Class). Phil: verify at check-in or Priority Pass. Hot buffet, full bar, Wi-Fi.</div>
+        </div>
+        <div class="info-box">
+          <div class="label">Centurion Lounge (T4) — Premium Option</div>
+          <div class="value">Requires AirTrain to T4 — allow 60–90 min total</div>
+          <div class="sub">Both free with Amex Platinum. JFK's finest lounge. Entry from 3:40 PM (within 5 hrs of departure). Two floors, full bars, shower suites.</div>
+        </div>
+      </div>
+      <p class="note">Recommendation: Arrive T8 by 6:30 PM. If time permits, Centurion Lounge in T4 for champagne and dinner — return to T8 by 8:00 PM for boarding. Otherwise Greenwich Lounge at T8 is perfectly comfortable.</p>
+    </div>
+
+    <div class="flight-card">
+      <h4>✈ Return — Delta DL0129 · Barcelona → JFK · Sunday August 9, 2026</h4>
+      <div class="flight-detail">
+        <div class="label">Departure</div>
+        <div class="value">Sunday August 9 at 10:55 AM — Barcelona El Prat T1, Gates D/E (Non-Schengen)</div>
+        <div class="label">Arrival</div>
+        <div class="value">Sunday August 9 at 1:36 PM (JFK) · ~9h 41m</div>
+        <div class="label">Confirmation</div>
+        <div class="value"><strong>JQP7XE</strong></div>
+        <div class="label">Logistics</div>
+        <div class="value">Leave Cotton House 7:00 AM (Blacklane #660894419) · Arrive airport 7:25–7:30 AM</div>
+        <div class="label">Check-In</div>
+        <div class="value">Delta counters in T1 departure hall. Online check-in opens Aug 8 at ~10:55am — check in the evening before</div>
+        <div class="label">Security</div>
+        <div class="value">After check-in → Passport Control (non-EU line, US passports — allow 20–30 min in August) → Security → Gates D/E</div>
+      </div>
+
+      <hr class="section-rule">
+      <h4 style="margin-bottom:12px; font-size:14px; color:var(--navy);">Barcelona T1 Lounge</h4>
+      <div class="info-box">
+        <div class="label">Sala VIP Joan Miró — Recommended</div>
+        <div class="value">Both Phil & Sarah: FREE via Amex Platinum Priority Pass</div>
+        <div class="sub">After Passport Control → follow signs to Gates D & E → first set of stairs in front of Burger King (or lift) → down to lounge. Hot buffet, bar, shower rooms. Hours: 06:00–21:00. Arrive before 9:30 AM for best seating. Must be past passport control — cannot return to shops after.</div>
+      </div>
+      <div class="action" style="margin-top:12px;">⚠ ACTION REQUIRED: Enroll in Priority Pass via Amex Platinum card BEFORE travel at americanexpress.com/prioritypass. You need the physical Priority Pass card (or digital version in Amex app) to access the Joan Miró lounge.</div>
+    </div>
+  </div>
+</section>
+
+<!-- DINING -->
+<section id="dining">
+  <div class="container">
+    <h2 class="section-title">Dining Guide</h2>
+    <div class="section-divider"></div>
+
+    <div class="dining-grid">
+      <div class="dining-card">
+        <div class="restaurant-city">Madrid</div>
+        <div class="restaurant-name">Lateral Madrid</div>
+        <div class="restaurant-meta">Modern Spanish tapas · €35–€50/couple · Gran Vía 57</div>
+        <div class="restaurant-note">Walk-in Sunday arrival — no reservation needed</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Madrid</div>
+        <div class="restaurant-name">Juana La Loca</div>
+        <div class="restaurant-meta">Creative tapas · €90–€130/couple · Calle de Recoletos 10</div>
+        <div class="restaurant-note confirmed-note">✓ CONFIRMED Jul 28 · 8:15 PM · Table until 9:45 PM</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Madrid</div>
+        <div class="restaurant-name">El Triciclo</div>
+        <div class="restaurant-meta">Michelin Bib Gourmand · €60–€80pp · Calle de Santa María 28</div>
+        <div class="restaurant-note confirmed-note">✓ Anniversary Dinner — Book Jul 29</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Toledo</div>
+        <div class="restaurant-name">Alfileritos 24</div>
+        <div class="restaurant-meta">Castilian tapas · €35–€55/couple · Near Cathedral</div>
+        <div class="restaurant-note">Walk-in or book same day · alfileritos.com</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Granada</div>
+        <div class="restaurant-name">Carmen Mirador de Aixa</div>
+        <div class="restaurant-meta">Andalusian terrace · €100–€140/couple · Albaicín</div>
+        <div class="restaurant-note confirmed-note">✓ CONFIRMED Jul 30 · 9:00 PM</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Granada</div>
+        <div class="restaurant-name">Taberna Bulanico</div>
+        <div class="restaurant-meta">Modern tapas · €60–€80/couple · Plaza Pescadería 15</div>
+        <div class="restaurant-note">Book ahead · Closed Mon & Tue · tabernabulanico.com</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Sevilla</div>
+        <div class="restaurant-name">Az-Zait</div>
+        <div class="restaurant-meta">Modern Andalusian · €90–€130/couple · Calle San Hermenegildo 18</div>
+        <div class="restaurant-note">Book 1 week ahead · Closed Monday · azzaitsevilla.com</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Sevilla</div>
+        <div class="restaurant-name">Las Teresas</div>
+        <div class="restaurant-meta">Traditional tapas · €60–€90/couple · Calle Santa Teresa 2</div>
+        <div class="restaurant-note">No reservations — arrive early. Don't miss espinacas con garbanzos.</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Girona</div>
+        <div class="restaurant-name">Vintages</div>
+        <div class="restaurant-meta">Mediterranean · €60–€80/couple · Carrer de la Cort Reial 15</div>
+        <div class="restaurant-note">Book ahead · Closed Tue & Wed · Aug 6 is Thu — open · vintagesgirona.cat</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">Colom Restaurant</div>
+        <div class="restaurant-meta">Catalan seafood + paella · €50–€70/couple · Gothic Quarter</div>
+        <div class="restaurant-note">Walk-in or short wait · colom.cat</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">Petit Comité</div>
+        <div class="restaurant-meta">Refined Catalan-French · €70–€100pp · 3-min from Cotton House</div>
+        <div class="restaurant-note confirmed-note">✓ Anniversary Dinner Aug 6 — Reserve courtyard table · petitcomite.cat</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">Sésamo</div>
+        <div class="restaurant-meta">Vegetarian bistro · €40–€60pp · El Raval</div>
+        <div class="restaurant-note">Book ahead · Closed Tuesday · restaurantsesamo.com</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">Teresa Carles</div>
+        <div class="restaurant-meta">Vegetarian institution · €50–€70pp · Eixample</div>
+        <div class="restaurant-note">Farewell dinner · Open every day · teresacarles.com</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">El Xampanyet</div>
+        <div class="restaurant-meta">Old-school cava bar · €25–€35/couple · El Born</div>
+        <div class="restaurant-note">No reservations — arrive at opening. House cava is legendary.</div>
+      </div>
+      <div class="dining-card">
+        <div class="restaurant-city">Barcelona</div>
+        <div class="restaurant-name">Cal Pep</div>
+        <div class="restaurant-meta">Seafood tapas counter · €40–€60/couple · El Born</div>
+        <div class="restaurant-note">No reservations for bar — queue at 6:30pm on the dot. Closed Sunday.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TRANSIT -->
+<section id="transit">
+  <div class="container">
+    <h2 class="section-title">Transit Guides</h2>
+    <div class="section-divider"></div>
+
+    <div style="overflow-x:auto; margin-bottom:32px;">
+      <table class="bookings-table">
+        <thead>
+          <tr>
+            <th>City</th>
+            <th>Best Ticket</th>
+            <th>Cost/Couple</th>
+            <th>Key Journey</th>
+            <th>Notes</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Madrid</strong></td>
+            <td>10-trip ticket × 2</td>
+            <td>€24.40</td>
+            <td>Banco de España → Atocha</td>
+            <td>Shareable · Metro L1 or L2</td>
+          </tr>
+          <tr>
+            <td><strong>Toledo</strong></td>
+            <td>Bus C5 (day trip)</td>
+            <td>€2.80</td>
+            <td>Toledo station → Plaza Zocodover</td>
+            <td>Pay driver · Then walk everywhere</td>
+          </tr>
+          <tr>
+            <td><strong>Granada</strong></td>
+            <td>Credibus card × 1 (shared)</td>
+            <td>~€10</td>
+            <td>Plaza Nueva → Alhambra (Bus C30)</td>
+            <td>Most important bus in Granada</td>
+          </tr>
+          <tr>
+            <td><strong>Seville</strong></td>
+            <td>Contactless tap on tram</td>
+            <td>€1.40/pp</td>
+            <td>Plaza Nueva → Cathedral area (T1 tram)</td>
+            <td>Easiest option — no card needed</td>
+          </tr>
+          <tr>
+            <td><strong>Girona</strong></td>
+            <td>Walk</td>
+            <td>Free</td>
+            <td>Station → Cathedral (10-min walk)</td>
+            <td>No transit needed</td>
+          </tr>
+          <tr>
+            <td><strong>Barcelona</strong></td>
+            <td>Hola BCN 5-day × 2</td>
+            <td>€87.20</td>
+            <td>Passeig de Gràcia → Sagrada Família (L2/L5)</td>
+            <td>Includes airport + all transport</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="transit-city">
+      <div class="transit-city-header">
+        Madrid
+        <span class="transit-city-best">Best: Walking + Taxis · JW Marriott is central</span>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Metro</div>
+        <div class="transit-value">12 lines, 287+ stations. Runs 6am–1:30am (Fri–Sat until 2am). Nearest to JW Marriott: Banco de España (L2) or Retiro (L9).</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Key Lines</div>
+        <div class="transit-value">L1 (light blue): Sol → Atocha → Retiro. L2 (red): Banco de España → Sol → Ópera. Buy at station machines — English language available.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Tickets</div>
+        <div class="transit-value">10-trip ticket €12.20 (shareable between two). Tourist Pass Zone A: 1 day €8.40 / 3 days €18.40 / 5 days €26.40.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Taxis</div>
+        <div class="transit-value">White with red diagonal stripe. Cross-city fare ~€8–12. Apps: Cabify, FreeNow, Uber. No need to tip but rounding up appreciated.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Toledo</div>
+        <div class="transit-value">AVE from Atocha. Bus C5 from Toledo station (~8 min, €1.40) or taxi (~€5–7). All Toledo sightseeing is on foot.</div>
+      </div>
+    </div>
+
+    <div class="transit-city">
+      <div class="transit-city-header">
+        Granada
+        <span class="transit-city-best">Best: Walking + Taxis + Bus C30 for Alhambra</span>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Alhambra Bus</div>
+        <div class="transit-value"><strong>Bus C30 (red minibus)</strong> — departs Plaza Nueva every 8–10 minutes. €1.60 single or €0.54 with Credibus card. Journey ~10 min. Much easier than steep walk. For 8:30am entry — take a taxi (~€7–10) to guarantee timing.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Taxis</div>
+        <div class="transit-value">White with green diagonal stripe. ~€5–8 across centre. Pide Taxi Granada: +34 958 28 00 00 (24hrs). Radio Taxi Genil: +34 958 132 323.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Note</div>
+        <div class="transit-value">Granada metro does NOT reach the historic centre or Alhambra — not useful. C30 bus is your Alhambra transport.</div>
+      </div>
+    </div>
+
+    <div class="transit-city">
+      <div class="transit-city-header">
+        Seville
+        <span class="transit-city-best">Best: Walking · Tourist core all within 10 min on foot</span>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Tram T1</div>
+        <div class="transit-value">Most useful for tourists. Runs from Plaza Nueva along Avenida de la Constitución past the Cathedral. 8 stops. Runs 6am–11:30pm. Single €1.40 — tap contactless bank card directly on the validator inside (simplest method).</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Taxis</div>
+        <div class="transit-value">White with yellow stripe. Santa Justa → Alfonso XIII: ~€10, 12 min. City to Triana: ~€7. Apps: Cabify, FreeNow, Uber. Base fare €1.47 (day).</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">To Santa Justa</div>
+        <div class="transit-value">Taxi: ~€10, 12 min — recommended with luggage. Allow extra time for Aug 4 early morning train.</div>
+      </div>
+    </div>
+
+    <div class="transit-city">
+      <div class="transit-city-header">
+        Barcelona
+        <span class="transit-city-best">Best: Metro + Walking · Cotton House on Passeig de Gràcia (L3)</span>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Recommended</div>
+        <div class="transit-value">Buy 2× Hola BCN 5-day cards (~€87/couple) on arrival at Sants. Covers Aug 4–9, all transport including airport on arrival day. Available at any metro station machine.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Key Stations</div>
+        <div class="transit-value">Passeig de Gràcia (L2/L3/L4): Cotton House, Casa Batlló. Sagrada Família (L2/L5). Jaume I (L4): Gothic Quarter, El Born. Barceloneta (L4): Beach. Lesseps (L3): Park Güell. Paral·lel (L2/L3): Poble Sec/Carrer de Blai.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">To Girona</div>
+        <div class="transit-value">Regional Rodalies trains from Barcelona Sants mainline station (walk upstairs — not the metro station). ~38 min, ~€8–12 one way. Frequent departures.</div>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Taxis</div>
+        <div class="transit-value">Black and yellow. City centre trips: €8–15. Taxi to Bunkers del Carmel: ~€12. Apps: Cabify, FreeNow, Bolt, Uber.</div>
+      </div>
+    </div>
+
+    <div class="transit-city">
+      <div class="transit-city-header">
+        Girona
+        <span class="transit-city-best">Best: Walk only · Entire old town walkable in 20 minutes</span>
+      </div>
+      <div class="transit-row">
+        <div class="transit-label">Station → Old Town</div>
+        <div class="transit-value">Walk: Cross the River Onyar on any of the colourful painted bridges. The Jewish Quarter, Cathedral, and medieval walls are all within 800m of the station. Follow the river toward the Cathedral — entirely navigable by instinct.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer style="background: var(--navy); color: rgba(245,240,232,0.5); text-align:center; padding:32px 24px; font-size:12px; letter-spacing:1px;">
+  <div style="color: var(--gold); font-family: Georgia, serif; font-size:16px; margin-bottom:12px;">✦</div>
+  <div style="margin-bottom:8px; color: rgba(245,240,232,0.8);">Twenty years. Six cities. Fourteen days.</div>
+  <div>Phil & Sarah Klein · July 26 – August 9, 2026 · ¡Feliz aniversario!</div>
+</footer>
+
+<a href="#top" class="back-to-top" id="backToTop">↑</a>
+
+<script>
+  // Back to top button
+  const btn = document.getElementById('backToTop');
+  window.addEventListener('scroll', () => {
+    btn.classList.toggle('visible', window.scrollY > 400);
+  });
+
+  // Active nav highlighting
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav a');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        navLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id);
+        });
+      }
+    });
+  }, { threshold: 0.15 });
+  sections.forEach(s => observer.observe(s));
+</script>
+
+</body>
+</html>
